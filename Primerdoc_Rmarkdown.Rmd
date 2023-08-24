@@ -22,7 +22,7 @@ Plantas_extintas_chile <- Plants|>
 Plantas_extintas_Latam <- Plants|>
   filter("continent" == 'South America')
 
-kableExtra::kable(Plantas_extintas_chile)
+print(Plantas_extintas_chile)
 ```
 
 
