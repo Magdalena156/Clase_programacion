@@ -1,0 +1,31 @@
+#Rmarkdown, clase 3
+
+```{r}
+library(tidyr)
+```
+
+-Bajamos datos de la siguiente [url] (https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv)
+
+-Se utilizó el siguiente código para abrir los datos
+
+```{r}
+url <- 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv'
+Plants <- read.csv(url) 
+```
+
+```{r}
+Plantas_extintas_chile <- Plants|>
+  filter("country" == 'Chile')
+```
+
+```{r}
+Plantas_extintas_Latam <- Plants|>
+  filter("continent" == 'South America')
+
+kableExtra::kable(Plantas_extintas_chile)
+```
+
+
+
+
+
