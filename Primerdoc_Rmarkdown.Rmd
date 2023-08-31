@@ -2,9 +2,10 @@
 
 ```{r}
 library(tidyr)
+library(dplyr)
 ```
 
--Bajamos datos de la siguiente [url] (https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv)
+- Bajamos datos de la siguiente [url] (https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv)
 
 -Se utilizó el siguiente código para abrir los datos
 
@@ -14,18 +15,13 @@ Plants <- read.csv(url)
 ```
 
 ```{r}
-Plantas_extintas_chile <- Plants|>
-  filter("country" == 'Chile')
+Plantas_extintas_chile <- Plants %>%
+  filter(country == 'Chile')
 ```
 
 ```{r}
-Plantas_extintas_Latam <- Plants|>
-  filter("continent" == 'South America')
+Plantas_extintas_Latam <- Plants %>%
+  filter(continent == 'South America')
 
-print(Plantas_extintas_chile)
+print(Plantas_extintas_Latam)
 ```
-
-
-
-
-
